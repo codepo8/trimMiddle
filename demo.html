@@ -29,8 +29,9 @@
         <label for="replacechar">Replacement char</label>
         <input type="text" id="replacechar" size="3" placeholder="Enter a string" value="…">
     </form>
+    <pre>trimMiddle("This is a long string that will be trimmed", <span id="ln"></span>, "<span id="rc"></span>");</pre>
     <output id="output"></output>
-    <script src="https://unpkg.com/trimmiddle@0.0.1/clientside.js"></script>
+    <script src="clientside.js"></script>
     <script>
         const demosentences = [
             "This is a long string that will be trimmed",
@@ -42,10 +43,14 @@
             "Dies is ein öü deutscher String mit Umlauten äß"
         ];
         const render = () => {
-            let out = ''; 
+            let out = '';
+            let length = document.querySelector('#length').value;
+            let replacechar = document.querySelector('#replacechar').value;
+            document.querySelector('#ln').innerText = length;
+            document.querySelector('#rc').innerText = replacechar;
             demosentences.forEach(sentence => {
                 out += sentence + '\n';
-                out += trimMiddle(sentence, +document.querySelector('#length').value, document.querySelector('#replacechar').value);
+                out += trimMiddle(sentence, +length, replacechar);
                 out += "\n";
             }); 
             document.querySelector("#output").innerText = out;
