@@ -17,8 +17,8 @@ const trimMiddle = (str, length = 16, replaceString = "…") => {
         let remainder = (length - replaceString.length) / 2;
         let chunks = [...new Intl.Segmenter().segment(str)].map(x => x.segment);
         return chunks.slice(0, Math.ceil(remainder)).join("") +
-        replaceString +
-        chunks.slice(-Math.floor(remainder)).join("");
+                replaceString +
+                chunks.slice(-Math.floor(remainder)).join("");
     }
 };
 export { trimMiddle };
