@@ -1,4 +1,4 @@
-import { trimMiddle } from './index.js';
+import { trimMiddle } from "./index.js";
 
 const demosentences = [
     "This is a long string that will be trimmed",
@@ -13,7 +13,7 @@ demosentences.forEach(sentence => {
     console.log(sentence);
     console.log(trimMiddle(sentence));
 });
-console.log(trimMiddle(`This is a long string that will be trimmed`, 8, `↔`));
+console.log(trimMiddle("This is a long string that will be trimmed", 8, "↔"));
 // Error cases
 // console.log(trimMiddle("This is a long string that will be trimmed", 16, "…"));
 // console.log(trimMiddle(4, 16, "…"));
