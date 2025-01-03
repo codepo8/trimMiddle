@@ -26,4 +26,15 @@ results in:
 
 The method splits sentences with emoji, unlike a `substring()` solution would. You can try it using the [demo page](https://codepo8.github.io/trimMiddle/demo.html) or `demo.js` on the commmand line.  
 
+Use it via npm:
+
+```
+npm -i trimmiddle
+```
+
+Or the client-side package via unpkg
+
+```HTML
+<script src="https://unpkg.com/trimmiddle@0.1.0/clientside.js"></script>
+```
 
