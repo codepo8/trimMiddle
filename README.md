@@ -24,6 +24,6 @@ results in:
 
 `This↔med`
 
-The method splits sentences with emoji, unlike a `substring()` solution would. You can try it using the [demo page]() or `demo.js` on the commmand line.  
+The method splits sentences with emoji, unlike a `substring()` solution would. You can try it using the [demo page](https://codepo8.github.io/trimMiddle/demo.html) or `demo.js` on the commmand line.  
 
 

@@ -1,7 +1,25 @@
 {
-    "name": "trimMiddle",
-    "version": "0.0.1",
-    "main": "index.js",
-    "license": "MIT",
-    "type": "module"
+  "name": "trimmiddle",
+  "version": "0.0.1",
+  "main": "index.js",
+  "license": "MIT",
+  "type": "module",
+  "description": "This is a package that shortens strings like Finder on Mac does. Instead of trimming from the start or end it trims the string in the middle and adds a filler char.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codepo8/trimMiddle.git"
+  },
+  "keywords": [
+    "string",
+    "trimming",
+    "conversion"
+  ],
+  "author": "Chris Heilmann",
+  "bugs": {
+    "url": "https://github.com/codepo8/trimMiddle/issues"
+  },
+  "homepage": "https://github.com/codepo8/trimMiddle#readme"
 }
