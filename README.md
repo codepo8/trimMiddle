@@ -1,0 +1,29 @@
+# trimMiddle    
+
+This is a package that shortens strings like Finder on Mac does. Instead of trimming from the start or end it trims the string in the middle and adds a filler char.
+
+For example:
+
+`This is a long string that will be trimmed`
+
+Will become: 
+
+`This is …trimmed`
+
+You call the functionality with the `trimMiddle` method, which takes three parameters: 
+
+* `str` - the string to split (mandatory).
+* `length` - an integer, preset to 16 (optional).
+* `replaceString` - string to add in the middle, preset to `…` (optional)
+
+For example: 
+
+`trimMiddle('This is a long string that will be trimmed', 8, ↔')`
+
+results in:
+
+`This↔med`
+
+The method splits sentences with emoji, unlike a `substring()` solution would. You can try it using the [demo page]() or `demo.js` on the commmand line.  
+
+

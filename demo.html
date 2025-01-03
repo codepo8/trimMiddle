@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>trimMiddle() test page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 1em;
+        }
+        output {
+            line-height: 1.6;
+        }
+        form {
+            background-color: #eee;
+            padding: 1em 2em;
+            margin-bottom: 1em;
+            border:1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>trimMiddle() test page</h1>
+    <form>
+        <label for="length">Length</label>
+        <input type="range" id="length" min=5 max=50 value="16" placeholder="Enter a number">
+        <label for="replacechar">Replacement char</label>
+        <input type="text" id="replacechar" size="3" placeholder="Enter a string" value="…">
+    </form>
+    <output id="output"></output>
+    <script src="clientside.js"></script>
+    <script>
+        const demosentences = [
+            "This is a long string that will be trimmed",
+            "This is a short string",
+            "This is a medium string that will be trimmed",
+            "This 🇺🇳 is 🤡 🐥 a string 🥰 🧑‍🧑‍🧒‍🧒 with compound emoji 😊 ",
+            "This is a string with a compound emoji 🧑‍🧑‍🧒‍🧒",
+            "This is a string with a compound emoji 🧑‍🧑‍🧒‍🧒 and a flag 🇺🇳",
+            "Dies is ein öü deutscher String mit Umlauten äß"
+        ];
+        const render = () => {
+            let out = ''; 
+            demosentences.forEach(sentence => {
+                out += sentence + '\n';
+                out += trimMiddle(sentence, +document.querySelector('#length').value, document.querySelector('#replacechar').value);
+                out += "\n";
+            }); 
+            document.querySelector("#output").innerText = out;
+        } 
+        render();
+        document.querySelector('form').addEventListener('change', render);
+    </script>
+</body>
+</html>
