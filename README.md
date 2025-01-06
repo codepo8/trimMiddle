@@ -35,5 +35,5 @@ npm -i trimmiddle
 Or the client-side package via unpkg
 
 ```HTML
-<script src="https://unpkg.com/trimmiddle@0.1.0/clientside.js"></script>
+<script src="https://unpkg.com/trimmiddle@0.2.0/clientside.js"></script>
 ```
