@@ -20,3 +20,8 @@ console.log(trimMiddle("This is a long string that will be trimmed", 8, "↔"));
 // console.log(trimMiddle("This is a long string that will be trimmed", "16", "…"));
 // console.log(trimMiddle("This is a long string that will be trimmed", 4, "…"));
 // console.log(trimMiddle("This is a long string that will be trimmed", 16, 4));
+console.log(trimMiddle(
+    "This is a long string that will be trimmed",
+    11,
+    "0123456789"
+  ));

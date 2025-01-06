@@ -29,5 +29,6 @@ const trimMiddle = (str, length = 16, replaceString = "…") => {
         }
         i++;
     }
-    return res + replaceString + tail.slice(-Math.floor(remainder)).join("");
+    let end = Math.floor(remainder); 
+    return res + replaceString + (end > 0 ? tail.slice(-Math.floor(remainder)).join("") : '');
 };
