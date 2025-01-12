@@ -30,6 +30,6 @@ const trimMiddle = (str, length = 16, replaceString = "…") => {
         i++;
     }
     let end = Math.floor(remainder); 
-    return res + replaceString + (end > 0 ? tail.slice(-Math.floor(remainder)).join("") : '');
+    return res + replaceString + (end > 0 ? tail.slice(-end).join("") : "");
 };
 export { trimMiddle };
