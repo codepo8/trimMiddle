@@ -17,11 +17,11 @@ const trimMiddle = (str, length = 16, replaceString = "…") => {
     }
 
     let res = "";
-    let remainder = (length - replaceString.length) / 2;
-    let head = Math.ceil(remainder);
-    let tail = [];
+    const remainder = (length - replaceString.length) / 2;
+    const head = Math.ceil(remainder);
+    const tail = [];
     let i = 0;
-    for (let { segment } of new Intl.Segmenter().segment(str)) {
+    for (const { segment } of new Intl.Segmenter().segment(str)) {
         if (i < head) {
             res += segment;
         } else {
@@ -29,6 +29,6 @@ const trimMiddle = (str, length = 16, replaceString = "…") => {
         }
         i++;
     }
-    let end = Math.floor(remainder); 
-    return res + replaceString + (end > 0 ? tail.slice(-Math.floor(remainder)).join("") : '');
+    const end = Math.floor(remainder);
+    return res + replaceString + (end > 0 ? tail.slice(-end).join("") : "");
 };
