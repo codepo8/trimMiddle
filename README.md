@@ -18,7 +18,7 @@ You call the functionality with the `trimMiddle` method, which takes three param
 
 For example:
 
-`trimMiddle('This is a long string that will be trimmed', 8, ↔')`
+`trimMiddle('This is a long string that will be trimmed', 8, '↔')`
 
 results in:
 
